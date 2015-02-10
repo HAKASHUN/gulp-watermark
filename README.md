@@ -34,7 +34,8 @@ Type: `String`
 The Image Path you want to use as watermark.
 
 #### options.resize
-Type: `String`  
+
+Type: `String`<br>
 Default: `100%`
 
 Possible values: `<width>x<height>`, `<resize>%`
@@ -42,7 +43,8 @@ Possible values: `<width>x<height>`, `<resize>%`
 The Resize Parameter for watermark.
 
 #### options.gravity
-Type: `String`
+
+Type: `String`<br> 
 Default: `SouthEast`
 
 Possible values: `NorthWest`, `North`, `NorthEast`, `West`, `Center`, `East`, `SouthWest`, `South`, `SouthEast`
