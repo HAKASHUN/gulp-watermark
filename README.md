@@ -2,6 +2,8 @@
 
 > watermark plugin for [gulp](https://github.com/wearefractal/gulp)
 
+![preview](https://cloud.githubusercontent.com/assets/1150412/6130144/9f58aef4-b186-11e4-96b4-44bc0a1837f8.jpg)
+
 ## Usage
 
 First, install `gulp-watermark` as a development dependency:
