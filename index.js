@@ -53,10 +53,12 @@ module.exports = function (param) {
 			 */
 			var gravity = param.gravity || 'SouthEast';
 			var resize = param.resize || '100%';
+			var background = param.background || 'none';
 			gm(file.contents, file.path)
 				.command('composite')
 				.in('-gravity', gravity)
 				.in('-resize', resize)
+				.in('-background', background)
 				.in(param.image)
 				.toBuffer(function(err, buffer) {
 					file.contents = buffer;
