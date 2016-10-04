@@ -61,8 +61,12 @@ module.exports = function (param) {
 				.in('-background', background)
 				.in(param.image)
 				.toBuffer(function(err, buffer) {
-					file.contents = buffer;
-					callback(null, file);
+					if (err)
+						throw err;
+					else {
+						file.contents = buffer;
+						callback(null, file);
+					}
 				})
 
 
