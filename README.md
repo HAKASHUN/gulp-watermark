@@ -21,7 +21,8 @@ gulp.src("./src/*.ext")
 	.pipe(watermark({
 		image: "test/fixtures/github.png",
         resize: '100x100',
-        gravity: 'Center'
+        gravity: 'Center',
+        imageMagick: true
 	}))
 	.pipe(gulp.dest("./dist"));
 ```
@@ -52,6 +53,13 @@ Default: `SouthEast`
 Possible values: `NorthWest`, `North`, `NorthEast`, `West`, `Center`, `East`, `SouthWest`, `South`, `SouthEast`
 
 The direction the primitive gravitates to when annotating the watermark image. Defaults to SouthEast.
+
+#### options.imageMagick
+
+Type: `bool`<br>
+Default: `false`
+
+Whether gm should use ImageMagick (if set to `true`) or GraphicsMagic.
 
 ## License
 
