@@ -54,6 +54,12 @@ module.exports = function (param) {
 			var gravity = param.gravity || 'SouthEast';
 			var resize = param.resize || '100%';
 			var background = param.background || 'none';
+			var imageMagick = param.imageMagick !== undefined ? param.imageMagick : true;
+
+			gm = gm.subClass({
+				imageMagick: imageMagick
+			});
+
 			gm(file.contents, file.path)
 				.command('composite')
 				.in('-gravity', gravity)
