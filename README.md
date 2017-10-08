@@ -21,7 +21,8 @@ gulp.src("./src/*.ext")
 	.pipe(watermark({
 		image: "test/fixtures/github.png",
         resize: '100x100',
-        gravity: 'Center'
+        gravity: 'Center',
+        dissolve: 30
 	}))
 	.pipe(gulp.dest("./dist"));
 ```
@@ -52,6 +53,14 @@ Default: `SouthEast`
 Possible values: `NorthWest`, `North`, `NorthEast`, `West`, `Center`, `East`, `SouthWest`, `South`, `SouthEast`
 
 The direction the primitive gravitates to when annotating the watermark image. Defaults to SouthEast.
+
+#### options.dissolve
+Type: `Number`<br>
+Default: `100`
+
+Possible values: `0-100`
+
+Indicates the level of dissolve from 0 to 100. 0 is completely transparent, and 100 is completely opaque.
 
 ## License
 
