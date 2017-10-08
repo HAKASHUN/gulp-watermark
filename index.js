@@ -50,14 +50,19 @@ module.exports = function (param) {
 			 *
 			 * -resize
 			 *   Ex. 50%
+			 *
+			 * -dissolve
+			 *   Ex. 50
 			 */
 			var gravity = param.gravity || 'SouthEast';
 			var resize = param.resize || '100%';
+			var dissolve = param.dissolve || '100';
 			var background = param.background || 'none';
 			gm(file.contents, file.path)
 				.command('composite')
 				.in('-gravity', gravity)
 				.in('-resize', resize)
+				.in('-dissolve', dissolve)
 				.in('-background', background)
 				.in(param.image)
 				.toBuffer(function(err, buffer) {
